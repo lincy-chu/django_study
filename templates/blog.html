@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% block title %}博客{% endblock %}
+{% block content %}
+<div class="main">
+        <h3>博客首页</h3>
+        <p>通过locals()方法返回的所有局部变量，模板里的要渲染的参数必须和视图函数变量的名字保持一致</p>
+        <p>
+            first: 获取首字母;
+            upper: 字母大写
+            {{ name|first|upper }}
+            <hr/>
+            lower: 字母小写
+            {{ address|lower }}
+            <hr/>
+            truncatewords仅对英文单词有效（剩余部分显示为'...'）
+            {{ password|truncatewords:2 }}
+            <hr/>
+            linenumbers显示带行号的文本
+            {% for s in str0 %}
+                {{ s|linenumbers }}
+            {% endfor %}
+        </p>
+        <p>{{ age }} -- {{ num }}</p>
+        <hr>
+        <p>
+            <ul>
+            {% for item in li %}
+                <li>{{ item }}</li>
+            {% endfor %}
+            </ul>
+        </p>
+        <hr>
+        <p>当前时间：{{ str_time }}</p>
+        <ul>
+            {% for user in users %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <p>用户数量：{{ count }}</p>
+        <p>
+            id大于或等于3的用户：
+            {% for user in user1 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            id大于3的用户：
+            {% for user in user2 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            id小于2的用户：
+            {% for user in user3 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            id小于或等于2的用户：
+            {% for user in user4 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            id大于2小于5的用户：
+            {% for user in user5 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            id等于1、2、3的用户：
+            {% for user in user6 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            id不在1、2、3之中的用户：
+            {% for user in user7 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            name包含‘朱’的用户：
+            {% for user in user8 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            name包含J的用户：
+            {% for user in user9 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <p>
+            name以康结尾的用户：
+            {% for user in user10 %}
+                <li>{{ user.id }} -- {{ user.name }} -- {{ user.email }} -- {{ user.add_time }}</li>
+            {% endfor %}
+        </p>
+        <hr>
+        <ul>
+            {% for item in user11 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <ul>
+            {% for item in user12 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <ul>
+            {% for item in user13 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <ul>
+            {% for item in user14 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <ul>
+            {% for item in user15 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <ul>
+            {% for item in user16 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <ul>
+            {% for item in user17 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <ol>
+            {% for item in user18 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ol>
+        <hr>
+        <ol>
+            {% for item in user19 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ol>
+        <hr>
+        <ol>
+            {% for item in user20 %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ol>
+        <hr>
+    </div>
+{% endblock %}
